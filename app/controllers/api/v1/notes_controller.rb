@@ -1,7 +1,7 @@
-module Api:V1
+module Api::V1
   class NotesController < ApplicationController
     def index
-      @notes = Notes.all
+      @notes = Note.all
       render json: @notes
     end
   end
