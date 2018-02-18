@@ -13,11 +13,11 @@ module Api::V1
     def update
       @note = Note.find(params[:id])
       @note.update_attributes(note_params)
-      render json: @idea
+      render json: @note
     end
 
     def destroy
-      @idea = Note.find(params[:id])
+      @note = Note.find(params[:id])
       if @note.destroy
         head :no_content, status: :ok
       else
